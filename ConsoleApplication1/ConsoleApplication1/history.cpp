@@ -1,35 +1,41 @@
-#include "history.h"
+#include "user.h"
 
-bool LoggingIn() {
-    string username, password, user, pass;
+UserManager::UserManager() {
+    head = nullptr;
+}
 
-    cout << "Enter Username: ";
-    cin >> username;
-    cout << "Enter Password: ";
-    cin >> password;
+UserManager::~UserManager() {
+    ClearUsers();
+}
 
+void UserManager::Register(string username, string password) {
+    User* newUser = new User{ username, password, head };
+    head = newUser;
+
+    ofstream file(username + ".txt");
+    file << username << endl << password;
+    file.close();
+}
+
+bool UserManager::LoggingIn(string username, string password) {
     ifstream read(username + ".txt");
     if (!read) {
         cout << "User not found!\n";
         return false;
     }
 
-    getline(read, user);
-    getline(read, pass);
+    string storedUser, storedPass;
+    getline(read, storedUser);
+    getline(read, storedPass);
     read.close();
 
-    return (user == username && pass == password);
+    return (storedUser == username && storedPass == password);
 }
 
-void Register() {
-    string username, password;
-
-    cout << "Select a username: ";
-    cin >> username;
-    cout << "Select a password: ";
-    cin >> password;
-
-    ofstream file(username + ".txt");
-    file << username << endl << password;
-    file.close();
+void UserManager::ClearUsers() {
+    while (head) {
+        User* temp = head;
+        head = head->next;
+        delete temp;
+    }
 }
