@@ -20,7 +20,7 @@ void UserManager::Register(string username, string password) {
 bool UserManager::LoggingIn(string username, string password) {
     ifstream read(username + ".txt");
     if (!read) {
-        cout << "User not found!\n";
+        cout << "User not found!" << endl;
         return false;
     }
 

@@ -1,17 +1,33 @@
-#include "history.h"
+#include "user.h"
 
 int main() {
+    UserManager manager;
     int choice;
 
     while (true) {
-        cout << "Select a choice!" << endl << "1: Register" << endl << "2: Login" << endl << "Your choice : ";
+        cout << "Select a choice!" << endl
+            << "1: Register" << endl
+            << "2: Login" << endl
+            << "Your choice: ";
         cin >> choice;
 
         if (choice == 1) {
-            Register();
+            string username, password;
+            cout << "Select a username: ";
+            cin >> username;
+            cout << "Select a password: ";
+            cin >> password;
+
+            manager.Register(username, password);
         }
         else if (choice == 2) {
-            if (LoggingIn()) {
+            string username, password;
+            cout << "Enter Username: ";
+            cin >> username;
+            cout << "Enter Password: ";
+            cin >> password;
+
+            if (manager.LoggingIn(username, password)) {
                 cout << "Login Successful" << endl;
                 break;
             }
