@@ -1,4 +1,8 @@
 #include "history.h"
+#include <fstream>
+#include <iostream>
+
+using namespace std;
 
 UserManager::UserManager() {
     head = nullptr;
@@ -33,7 +37,7 @@ bool UserManager::LoggingIn(string username, string password) {
 }
 
 void UserManager::ClearUsers() {
-    while (head) {
+    while (head != nullptr) {
         User* temp = head;
         head = head->next;
         delete temp;

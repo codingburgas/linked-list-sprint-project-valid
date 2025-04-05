@@ -11,6 +11,13 @@ int main() {
             << "Your choice: ";
         cin >> choice;
 
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input! Please enter a number." << endl;
+            continue;
+        }
+
         if (choice == 1) {
             string username, password;
             cout << "Select a username: ";
@@ -34,6 +41,10 @@ int main() {
             else {
                 cout << "Incorrect Information, Try Again!" << endl;
             }
+        }
+        else if (choice == 0) {
+            cout << "Exiting the program. Bye!" << endl;
+            break;
         }
         else {
             cout << "Invalid option. Try again!" << endl;
