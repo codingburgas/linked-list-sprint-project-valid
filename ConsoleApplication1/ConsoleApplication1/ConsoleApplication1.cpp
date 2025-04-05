@@ -1,4 +1,5 @@
 #include "history.h"
+#include "quiz.h"
 
 int main() {
     UserManager manager;
@@ -8,6 +9,7 @@ int main() {
         cout << "Select a choice!" << endl
             << "1: Register" << endl
             << "2: Login" << endl
+            << "0: Exit" << endl
             << "Your choice: ";
         cin >> choice;
 
@@ -36,6 +38,9 @@ int main() {
 
             if (manager.LoggingIn(username, password)) {
                 cout << "Login Successful" << endl;
+
+                QuizManager quiz;
+                quiz.StartQuiz();
                 break;
             }
             else {
@@ -51,3 +56,4 @@ int main() {
         }
     }
 }
+
