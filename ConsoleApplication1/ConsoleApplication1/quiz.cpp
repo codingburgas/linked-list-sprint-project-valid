@@ -1,12 +1,41 @@
 #include "quiz.h"
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
+void askQuestion(const string& question, const string& a, const string& b, const string& c, char correct, const string& hint, int& score) {
+    string answer;
+
+    while (true) {
+        cout << question << endl;
+        cout << "A) " << a << endl;
+        cout << "B) " << b << endl;
+        cout << "C) " << c << endl;
+        cout << "Type A/B/C or H for a hint: ";
+        cin >> answer;
+
+        if (answer == "H" || answer == "h") {
+            cout << "Hint: " << hint << endl;
+            continue; // Re-ask the question
+        }
+
+        if (answer == "A" || answer == "a" || answer == "B" || answer == "b" || answer == "C" || answer == "c") {
+            if (toupper(answer[0]) == correct) score++;
+            break;
+        }
+        else {
+            cout << "Invalid choice. Please enter A, B, C, or H." << endl;
+        }
+    }
+
+    system("cls");
+}
+
 void QuizManager::StartQuiz() {
     int score = 0;
-    string answer;
+    string input;
     int levelChoice;
 
     cout << "Choose Difficulty Level:" << endl;
@@ -23,45 +52,60 @@ void QuizManager::StartQuiz() {
         cin.ignore(1000, '\n');
     }
 
+    system("cls");
     cout << "--- Quiz Time! ---" << endl;
 
     if (levelChoice == 1) {
-        // Easy
-        cout << "1. What is the main color of the Greece" << endl;
-        cout << "A) Blue" << endl << "B) Green" << endl <<" C) Red" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "A" || answer == "a") score++;
+        askQuestion(
+            "1. What is the main color of Greece?",
+            "Blue", "Green", "Red",
+            'A',
+            "Think of the flag!",
+            score
+        );
 
-        cout << "2.On how much seas does Bulgaria border?" << endl;
-        cout << "A) 2" << endl << "B) 3" << endl << "C) 1" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "C" || answer == "c") score++;
+        askQuestion(
+            "2. On how many seas does Bulgaria border?",
+            "2", "3", "1",
+            'C',
+            "Check a map of the Black Sea region.",
+            score
+        );
     }
     else if (levelChoice == 2) {
-        // Normal
-        cout << "1. What is the capital of France?" << endl;
-        cout << "A) Paris" << endl << "B) Berlin" << endl << "C) Rome" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "A" || answer == "a") score++;
+        askQuestion(
+            "1. What is the capital of France?",
+            "Paris", "Berlin", "Rome",
+            'A',
+            "It's known as the City of Light.",
+            score
+        );
 
-        cout << "2. How many presidents has the USA had?";
-        cout << "A) 46" << endl << "B) 41" << endl << "C) 44" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "C" || answer == "c") score++;
+        askQuestion(
+            "2. How many presidents has the USA had?",
+            "46", "41", "44",
+            'C',
+            "Think of the number before Joe Biden.",
+            score
+        );
     }
     else if (levelChoice == 3) {
-        // Hard
-        cout << "1. In what year did Bulgaria fall under Ottoman rule?" << endl;
-        cout << "A) 1421" << endl << "B) 1393" << endl << "C) 1880" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "B" || answer == "b") score++;
+        askQuestion(
+            "1. In what year did Bulgaria fall under Ottoman rule?",
+            "1421", "1393", "1880",
+            'B',
+            "It happened in the late 14th century.",
+            score
+        );
 
-        cout << "2. Who developed the theory of relativity?" << endl;
-        cout << "A) Newton" << endl << "B) Tesla" << endl << "C) Einstein" << endl << "Your answer : ";
-        cin >> answer;
-        if (answer == "C" || answer == "c") score++;
+        askQuestion(
+            "2. Who developed the theory of relativity?",
+            "Newton", "Tesla", "Einstein",
+            'C',
+            "E=mc²",
+            score
+        );
     }
 
     cout << "You got " << score << " out of 2 correct!" << endl;
 }
-

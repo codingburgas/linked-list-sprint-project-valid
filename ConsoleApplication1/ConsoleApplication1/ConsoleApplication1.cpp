@@ -1,5 +1,9 @@
 #include "history.h"
 #include "quiz.h"
+#include <iostream>
+#include <cstdlib> // For system("cls")
+
+using namespace std;
 
 int main() {
     UserManager manager;
@@ -21,6 +25,7 @@ int main() {
         }
 
         if (choice == 1) {
+            system("cls");
             string username, password;
             cout << "Select a username: ";
             cin >> username;
@@ -30,6 +35,7 @@ int main() {
             manager.Register(username, password);
         }
         else if (choice == 2) {
+            system("cls");
             string username, password;
             cout << "Enter Username: ";
             cin >> username;
@@ -38,6 +44,8 @@ int main() {
 
             if (manager.LoggingIn(username, password)) {
                 cout << "Login Successful" << endl;
+                system("pause"); // Optional pause before quiz
+                system("cls");
 
                 QuizManager quiz;
                 quiz.StartQuiz();
@@ -56,4 +64,3 @@ int main() {
         }
     }
 }
-

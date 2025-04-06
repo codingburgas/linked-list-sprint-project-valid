@@ -1,6 +1,2 @@
-﻿  ConsoleApplication1.cpp
-  history.cpp
-  quiz.cpp
-  Generating Code...
-  LINK : C:\Users\Home\Desktop\linked-list-sprint-project-valid\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe not found or not built by the last incremental link; performing full link
-  ConsoleApplication1.vcxproj -> C:\Users\Home\Desktop\linked-list-sprint-project-valid\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
+﻿  quiz.cpp
+  ConsoleApplication1.vcxproj -> C:\Users\User\Downloads\linked-list-sprint-project-valid\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
