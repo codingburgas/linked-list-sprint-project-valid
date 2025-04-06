@@ -71,6 +71,30 @@ void QuizManager::StartQuiz() {
             "Check a map of the Black Sea region.",
             score
         );
+
+        askQuestion(
+            "3. Who was the first President of the United States?",
+            "George Washington", "Abraham Lincoln", "John Adams",
+            'A',
+            "He appears on the U.S. one-dollar bill.",
+            score
+        );
+
+        askQuestion(
+            "4. In which year did World War II end?",
+            "1940", "1945", "1950",
+            'B',
+            "It ended the same year Germany and Japan surrendered.",
+            score
+        );
+
+        askQuestion(
+            "5. What famous wall divided Berlin from 1961 to 1989?",
+            "Berlin Wall", "Iron Wall", "Wall of Germany",
+            'A',
+            "It was a symbol of the Cold War between East and West.",
+            score
+        );
     }
     else if (levelChoice == 2) {
         askQuestion(
@@ -86,6 +110,30 @@ void QuizManager::StartQuiz() {
             "46", "41", "44",
             'C',
             "Think of the number before Joe Biden.",
+            score
+        );
+
+        askQuestion(
+            "3. What event started World War I?",
+            "The invasion of Poland", "The bombing of Pearl Harbor", "The assassination of Archduke Franz Ferdinand",
+            'C',
+            "It involved a royal figure being shot in Sarajevo.",
+            score
+        );
+
+        askQuestion(
+            "4. What country gifted the Statue of Liberty to the U.S.?",
+            "Italy", "France", "Germany",
+            'B',
+            "This country is also famous for the Eiffel Tower.",
+            score
+        );
+
+        askQuestion(
+            "5. What ancient civilization built Machu Picchu?",
+            "Incas", "Aztecs", "Mayans",
+            'A',
+            "This civilization was based in the Andes Mountains of Peru.",
             score
         );
     }
@@ -105,7 +153,31 @@ void QuizManager::StartQuiz() {
             "E=mc²",
             score
         );
+
+        askQuestion(
+            "3. In which year did the Russian Revolution begin?",
+            "1905", "1917", "1921",
+            'B',
+            "Same year the U.S. entered World War I.",
+            score
+        );
+
+        askQuestion(
+            "What African empire was ruled by Mansa Musa?",
+            "Ghana Empire", "Songhai Empire", "Mali Empire",
+            'C',
+            "He was the richest man in history and went on a legendary pilgrimage to Mecca.",
+            score
+        );
+
+        askQuestion(
+            "5. Who was the longest-reigning monarch in European history before Queen Elizabeth II?",
+            "Louis XIV of France", "Queen Victoria", "Emperor Franz Joseph I",
+            'A',
+            "He was called the 'Sun King'",
+            score
+        );
     }
 
-    cout << "You got " << score << " out of 2 correct!" << endl;
+    cout << "You got " << score << " out of 5 correct!" << endl;
 }
