@@ -2,11 +2,14 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <fstream>
 
 using namespace std;
 
+// Function for asking the question (for easy and normal)
 void askQuestion(const string& question, const string& a, const string& b, const string& c, char correct, const string& hint, int& score) {
     string answer;
+    bool hintShown = false;
 
     while (true) {
         cout << question << endl;
@@ -17,8 +20,21 @@ void askQuestion(const string& question, const string& a, const string& b, const
         cin >> answer;
 
         if (answer == "H" || answer == "h") {
-            cout << "Hint: " << hint << endl;
-            continue; // Re-ask the question
+            if (!hintShown) {
+                cout << "Hint: " << hint << endl;
+                hintShown = true;
+                cout << "Do you want another hint (map)? (Y/N): ";
+                string extraHint;
+                cin >> extraHint;
+
+                if (extraHint == "Y" || extraHint == "y") {
+                    cout << "Please look at the map for help.\n";
+                }
+                continue; // Re-ask the question
+            }
+            else {
+                cout << "Hint already shown.\n";
+            }
         }
 
         if (answer == "A" || answer == "a" || answer == "B" || answer == "b" || answer == "C" || answer == "c") {
@@ -33,6 +49,62 @@ void askQuestion(const string& question, const string& a, const string& b, const
     system("cls");
 }
 
+// Function for asking hard questions with map
+void askQuestion(const string& question, const string& a, const string& b, const string& c, char correct, const string& hint, const string& mapFile, int& score) {
+    string answer;
+    bool hintShown = false;
+
+    while (true) {
+        cout << question << endl;
+        cout << "A) " << a << endl;
+        cout << "B) " << b << endl;
+        cout << "C) " << c << endl;
+        cout << "Type A/B/C or H for a hint: ";
+        cin >> answer;
+
+        if (answer == "H" || answer == "h") {
+            if (!hintShown) {
+                cout << "Hint: " << hint << endl;
+                hintShown = true;
+                cout << "Do you want another hint (map)? (Y/N): ";
+                string extraHint;
+                cin >> extraHint;
+
+                if (extraHint == "Y" || extraHint == "y") {
+                    ifstream file(mapFile);
+                    if (file.is_open()) {
+                        cout << "\n=== ASCII Map ===\n";
+                        string line;
+                        while (getline(file, line)) {
+                            cout << line << endl;
+                        }
+                        cout << "=================\n";
+                        file.close();
+                    }
+                    else {
+                        cout << "Could not load map file.\n";
+                    }
+                }
+                continue; // Re-ask the question
+            }
+            else {
+                cout << "Hint already shown.\n";
+            }
+        }
+
+        if (answer == "A" || answer == "a" || answer == "B" || answer == "b" || answer == "C" || answer == "c") {
+            if (toupper(answer[0]) == correct) score++;
+            break;
+        }
+        else {
+            cout << "Invalid choice. Please enter A, B, C, or H." << endl;
+        }
+    }
+
+    system("cls");
+}
+
+// Main Quiz Manager
 void QuizManager::StartQuiz() {
     int score = 0;
     string input;
@@ -224,6 +296,7 @@ void QuizManager::StartQuiz() {
             "Treaty of Berlin", "Treaty of Bucharest", "Treaty of Constantinople",
             'C',
             "It was signed after the declaration of independence.",
+            "Independence Treaty.txt",
             score
         );
 
@@ -232,6 +305,7 @@ void QuizManager::StartQuiz() {
             "Plovdiv", "Vidin", "Tarnovo",
             'B',
             "Tsar Ivan Sratsimir ruled from there.",
+            "Vidin.txt",
             score
         );
 
@@ -240,6 +314,7 @@ void QuizManager::StartQuiz() {
             "1878", "1879", "1885",
             'B',
             "It was Bulgaria's first modern constitution.",
+            "Tarnovo Constitution.txt",
             score
         );
 
@@ -248,6 +323,7 @@ void QuizManager::StartQuiz() {
             "Assassination of Levski", "Failed tax reforms", "Brutality of Ottoman authorities",
             'C',
             "People rose against harsh treatment and injustice.",
+            "April Uprising.txt",
             score
         );
 
@@ -256,6 +332,7 @@ void QuizManager::StartQuiz() {
             "Dragan Tsankov", "Petko Slaveykov", "There was no Bulgarian representative",
             'C',
             "Bulgaria was not invited to defend its interests.",
+            "Berlin Congress.txt",
             score
         );
 
@@ -264,6 +341,7 @@ void QuizManager::StartQuiz() {
             "Unite all Slavs", "Fight against Austria-Hungary", "Autonomy for Macedonia and Adrianople",
             'C',
             "Their slogan was 'Autonomy within the Ottoman Empire'.",
+            "IMRO Map.txt",
             score
         );
 
@@ -272,6 +350,7 @@ void QuizManager::StartQuiz() {
             "917", "1014", "811",
             'A',
             "Simeon I crushed the Byzantines there.",
+            "Anchialos Battle.txt",
             score
         );
 
@@ -280,6 +359,7 @@ void QuizManager::StartQuiz() {
             "Alexander Stambolijski", "Vasil Radoslavov", "Ivan Geshov",
             'C',
             "He led the country into the First Balkan War.",
+            "Balkan Wars.txt",
             score
         );
 
@@ -288,6 +368,7 @@ void QuizManager::StartQuiz() {
             "Zname", "Tsar Kaloyan", "Chavdar",
             'C',
             "It operated as a partisan unit.",
+            "WWII Resistance.txt",
             score
         );
 
@@ -296,8 +377,10 @@ void QuizManager::StartQuiz() {
             "Simeon II", "Konstantin Muraviev", "Todor Zhivkov",
             'B',
             "He was overthrown after just a few days in office.",
+            "1944 Coup.txt",
             score
         );
-        }
+    }
+
     cout << "You got " << score << " out of 10 correct!" << endl;
 }
