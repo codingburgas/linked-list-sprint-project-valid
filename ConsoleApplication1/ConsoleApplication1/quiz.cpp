@@ -57,127 +57,247 @@ void QuizManager::StartQuiz() {
 
     if (levelChoice == 1) {
         askQuestion(
-            "1. What is the main color of Greece?",
-            "Blue", "Green", "Red",
+            "1. When was Bulgaria's independence declared?",
+            "1908", "1878", "1944",
             'A',
-            "Think of the flag!",
+            "Check your history textbook!",
             score
         );
 
         askQuestion(
-            "2. On how many seas does Bulgaria border?",
-            "2", "3", "1",
-            'C',
-            "Check a map of the Black Sea region.",
-            score
-        );
-
-        askQuestion(
-            "3. Who was the first President of the United States?",
-            "George Washington", "Abraham Lincoln", "John Adams",
+            "2. Who was the first Bulgarian khan?",
+            "Asparuh", "Krum", "Samuil",
             'A',
-            "He appears on the U.S. one-dollar bill.",
+            "Asparuh founded Danubian Bulgaria in 681 AD.",
             score
         );
 
         askQuestion(
-            "4. In which year did World War II end?",
-            "1940", "1945", "1950",
+            "3. What was the name of the first Bulgarian state?",
+            "Sofia Kingdom", "First Bulgarian Empire", "Northern Kingdom",
             'B',
-            "It ended the same year Germany and Japan surrendered.",
+            "The First Bulgarian Empire existed from 681 to 1018.",
             score
         );
 
         askQuestion(
-            "5. What famous wall divided Berlin from 1961 to 1989?",
-            "Berlin Wall", "Iron Wall", "Wall of Germany",
+            "4. Who created the Bulgarian alphabet?",
+            "Levski and Botev", "Cyril and Methodius", "Simeon and Boris",
+            'B',
+            "Cyril and Methodius created the Glagolitic alphabet.",
+            score
+        );
+
+        askQuestion(
+            "5. When did Bulgaria fall under Ottoman rule?",
+            "1396", "1876", "681",
             'A',
-            "It was a symbol of the Cold War between East and West.",
+            "Look up when the Vidin Tsardom fell!",
+            score
+        );
+
+        askQuestion(
+            "6. Who was Vasil Levski?",
+            "A king", "A revolutionary", "A teacher",
+            'B',
+            "He was known as the Apostle of Freedom.",
+            score
+        );
+
+        askQuestion(
+            "7. What was the most famous uprising in 1876?",
+            "April Uprising", "September Uprising", "Chiprovtsi Uprising",
+            'A',
+            "It was a major step in the fight for freedom.",
+            score
+        );
+
+        askQuestion(
+            "8. When was Bulgaria liberated from Ottoman rule?",
+            "1908", "1944", "1878",
+            'C',
+            "The Treaty of San Stefano was signed in this year.",
+            score
+        );
+
+        askQuestion(
+            "9. Who was the ruler during Bulgaria's Golden Age?",
+            "Tsar Ivan Asen II", "Tsar Simeon the Great", "Tsar Peter",
+            'B',
+            "Simeon ruled from 893 to 927.",
+            score
+        );
+
+        askQuestion(
+            "10. What was the capital of the Second Bulgarian Empire?",
+            "Sofia", "Veliko Tarnovo", "Plovdiv",
+            'B',
+            "Tarnovgrad – the pride of Bulgarian tsars!",
             score
         );
     }
+
     else if (levelChoice == 2) {
         askQuestion(
-            "1. What is the capital of France?",
-            "Paris", "Berlin", "Rome",
+            "1. Which Bulgarian tsar defeated the Byzantines at the Battle of Kleidion?",
+            "Tsar Ivan Shishman", "Tsar Kaloyan", "Tsar Samuel",
+            'C',
+            "Samuel fought fiercely against Byzantium.",
+            score
+        );
+
+        askQuestion(
+            "2. What year did the Second Bulgarian Empire begin?",
+            "1185", "1018", "1230",
             'A',
-            "It's known as the City of Light.",
+            "Think of the Asen and Peter brothers' uprising.",
             score
         );
 
         askQuestion(
-            "2. How many presidents has the USA had?",
-            "46", "41", "44",
-            'C',
-            "Think of the number before Joe Biden.",
-            score
-        );
-
-        askQuestion(
-            "3. What event started World War I?",
-            "The invasion of Poland", "The bombing of Pearl Harbor", "The assassination of Archduke Franz Ferdinand",
-            'C',
-            "It involved a royal figure being shot in Sarajevo.",
-            score
-        );
-
-        askQuestion(
-            "4. What country gifted the Statue of Liberty to the U.S.?",
-            "Italy", "France", "Germany",
+            "3. Where was Khan Krum's victory against the Byzantines?",
+            "Pliska", "Varbitsa Pass", "Preslav",
             'B',
-            "This country is also famous for the Eiffel Tower.",
+            "He ambushed Emperor Nicephorus there.",
             score
         );
 
         askQuestion(
-            "5. What ancient civilization built Machu Picchu?",
-            "Incas", "Aztecs", "Mayans",
-            'A',
-            "This civilization was based in the Andes Mountains of Peru.",
+            "4. What title did Bulgarian rulers use during the First Empire?",
+            "Tsar", "Emperor", "Khan",
+            'C',
+            "Khan was the title before Christianity.",
+            score
+        );
+
+        askQuestion(
+            "5. Which Bulgarian ruler introduced Christianity as official religion?",
+            "Tsar Simeon", "Khan Boris I", "Tsar Peter",
+            'B',
+            "He was baptized and converted the country.",
+            score
+        );
+
+        askQuestion(
+            "6. What city was the cultural center during the Golden Age of Bulgaria?",
+            "Plovdiv", "Preslav", "Sofia",
+            'B',
+            "It became a major literary and spiritual hub.",
+            score
+        );
+
+        askQuestion(
+            "7. Which alphabet replaced Glagolitic in Bulgaria?",
+            "Greek", "Latin", "Cyrillic",
+            'C',
+            "It was based on the Glagolitic alphabet.",
+            score
+        );
+
+        askQuestion(
+            "8. Which battle marked the end of the First Bulgarian Empire?",
+            "Battle of Adrianople", "Battle of Kleidion", "Fall of Vidin",
+            'B',
+            "Basil II crushed Samuel’s army.",
+            score
+        );
+
+        askQuestion(
+            "9. Who ruled during Bulgaria's territorial peak?",
+            "Tsar Boris I", "Tsar Simeon I", "Tsar Ivan Alexander",
+            'B',
+            "Under his rule, Bulgaria reached three seas.",
+            score
+        );
+
+        askQuestion(
+            "10. Who led the uprising that restored Bulgarian independence in 1185?",
+            "Khan Krum", "Asen and Peter", "Tsar Ivan Asen II",
+            'B',
+            "They founded the Second Bulgarian Empire.",
             score
         );
     }
     else if (levelChoice == 3) {
         askQuestion(
-            "1. In what year did Bulgaria fall under Ottoman rule?",
-            "1421", "1393", "1880",
-            'B',
-            "It happened in the late 14th century.",
-            score
-        );
-
-        askQuestion(
-            "2. Who developed the theory of relativity?",
-            "Newton", "Tesla", "Einstein",
+            "1. Which treaty officially recognized Bulgaria’s independence in 1908?",
+            "Treaty of Berlin", "Treaty of Bucharest", "Treaty of Constantinople",
             'C',
-            "E=mc²",
+            "It was signed after the declaration of independence.",
             score
         );
 
         askQuestion(
-            "3. In which year did the Russian Revolution begin?",
-            "1905", "1917", "1921",
+            "2. What was the name of Bulgaria’s last medieval capital before Ottoman rule?",
+            "Plovdiv", "Vidin", "Tarnovo",
             'B',
-            "Same year the U.S. entered World War I.",
+            "Tsar Ivan Sratsimir ruled from there.",
             score
         );
 
         askQuestion(
-            "What African empire was ruled by Mansa Musa?",
-            "Ghana Empire", "Songhai Empire", "Mali Empire",
+            "3. In which year was the Tarnovo Constitution adopted?",
+            "1878", "1879", "1885",
+            'B',
+            "It was Bulgaria's first modern constitution.",
+            score
+        );
+
+        askQuestion(
+            "4. What event triggered the April Uprising of 1876?",
+            "Assassination of Levski", "Failed tax reforms", "Brutality of Ottoman authorities",
             'C',
-            "He was the richest man in history and went on a legendary pilgrimage to Mecca.",
+            "People rose against harsh treatment and injustice.",
             score
         );
 
         askQuestion(
-            "5. Who was the longest-reigning monarch in European history before Queen Elizabeth II?",
-            "Louis XIV of France", "Queen Victoria", "Emperor Franz Joseph I",
+            "5. Who led the Bulgarian delegation at the Berlin Congress (1878)?",
+            "Dragan Tsankov", "Petko Slaveykov", "There was no Bulgarian representative",
+            'C',
+            "Bulgaria was not invited to defend its interests.",
+            score
+        );
+
+        askQuestion(
+            "6. What was the main goal of the Internal Macedonian Revolutionary Organization (IMRO)?",
+            "Unite all Slavs", "Fight against Austria-Hungary", "Autonomy for Macedonia and Adrianople",
+            'C',
+            "Their slogan was 'Autonomy within the Ottoman Empire'.",
+            score
+        );
+
+        askQuestion(
+            "7. When was the Battle of Anchialos (one of Bulgaria’s largest medieval victories)?",
+            "917", "1014", "811",
             'A',
-            "He was called the 'Sun King'",
+            "Simeon I crushed the Byzantines there.",
             score
         );
-    }
 
-    cout << "You got " << score << " out of 5 correct!" << endl;
+        askQuestion(
+            "8. Who was the Bulgarian PM during the Balkan Wars?",
+            "Alexander Stambolijski", "Vasil Radoslavov", "Ivan Geshov",
+            'C',
+            "He led the country into the First Balkan War.",
+            score
+        );
+
+        askQuestion(
+            "9. What was the codename of the secret Bulgarian resistance network during WWII?",
+            "Zname", "Tsar Kaloyan", "Chavdar",
+            'C',
+            "It operated as a partisan unit.",
+            score
+        );
+
+        askQuestion(
+            "10. Who was the leader of Bulgaria during the 1944 communist coup?",
+            "Simeon II", "Konstantin Muraviev", "Todor Zhivkov",
+            'B',
+            "He was overthrown after just a few days in office.",
+            score
+        );
+        }
+    cout << "You got " << score << " out of 10 correct!" << endl;
 }
