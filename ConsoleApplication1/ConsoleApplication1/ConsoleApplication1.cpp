@@ -2,12 +2,33 @@
 #include "quiz.h"
 #include <iostream>
 #include <cstdlib> // For system("cls")
+#include <fstream>
+#include <string>
 
 using namespace std;
+
+// Function to display the ASCII art from the file
+void displayMenuArt(const string& filename) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Could not open ASCII art file: " << filename << endl;
+        return;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        cout << line << endl;
+    }
+
+    file.close();
+}
 
 int main() {
     UserManager manager;
     int choice;
+
+    // Display the ASCII Art (HISTORYQUIZ)
+    displayMenuArt("menu_art.txt");
 
     while (true) {
         cout << "Select a choice!" << endl

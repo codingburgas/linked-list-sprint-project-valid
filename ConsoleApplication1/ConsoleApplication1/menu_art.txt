@@ -1,0 +1,15 @@
++------------------------------------------------+
+|                                                |
+|     H   H   III  SSSS  TTTTT  OOO  RRRR   Y   Y |
+|     H   H    I   S       T   O   O R   R   Y   Y |
+|     HHHHH    I   SSS     T   O   O RRRR    YYY  |
+|     H   H    I      S    T   O   O R  R     Y    |
+|     H   H   III  SSSS    T    OOO  R   R    Y    |
+|                                                |
+|                    QQQ   U   U  III  ZZZZ      |
+|                   Q   Q  U   U   I     Z       |
+|                   Q   Q  U   U   I    Z        |
+|                   Q   Q  U   U   I   Z         |
+|                    QQQ    UUU   III  ZZZZ      |
+|                                                |
++------------------------------------------------+   
