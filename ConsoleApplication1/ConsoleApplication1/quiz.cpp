@@ -296,7 +296,7 @@ void QuizManager::StartQuiz() {
             "Treaty of Berlin", "Treaty of Bucharest", "Treaty of Constantinople",
             'C',
             "It was signed after the declaration of independence.",
-            "Independence Treaty.txt",
+            "Treaty of Constantinople.txt",
             score
         );
 
