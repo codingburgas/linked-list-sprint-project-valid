@@ -1,9 +1,11 @@
-#include "historyMeeting.h"
+﻿#include "historyMeeting.h"
 #include <fstream>
 #include <iostream>
 
+// Конструктор – инициализира началото на списъка със събития
 HistoryMeeting::HistoryMeeting() : head(nullptr) {}
 
+// Деструктор – освобождава всички събития от паметта
 HistoryMeeting::~HistoryMeeting() {
     Event* current = head;
     while (current != nullptr) {
@@ -13,6 +15,7 @@ HistoryMeeting::~HistoryMeeting() {
     }
 }
 
+// Запазване на всички събития във файл
 void HistoryMeeting::saveToFile() {
     std::ofstream file("events.txt");
     Event* current = head;
@@ -23,6 +26,7 @@ void HistoryMeeting::saveToFile() {
     file.close();
 }
 
+// Зареждане на събития от файл
 void HistoryMeeting::loadFromFile() {
     std::ifstream file("events.txt");
     if (!file) return;
@@ -32,6 +36,7 @@ void HistoryMeeting::loadFromFile() {
         size_t sep = line.find('|');
         if (sep == std::string::npos) continue;
 
+        // Създаване на ново събитие и добавяне към списъка
         Event* e = new Event;
         e->year = stoi(line.substr(0, sep));
         e->title = line.substr(sep + 1);
@@ -50,6 +55,7 @@ void HistoryMeeting::loadFromFile() {
     file.close();
 }
 
+// Добавяне на ново събитие от потребителя
 void HistoryMeeting::addEvent() {
     Event* e = new Event;
     std::cout << "Enter year: ";
@@ -59,6 +65,7 @@ void HistoryMeeting::addEvent() {
     std::getline(std::cin, e->title);
     e->next = nullptr;
 
+    // Добавяне в края на списъка
     if (head == nullptr) {
         head = e;
     }
@@ -69,10 +76,11 @@ void HistoryMeeting::addEvent() {
         current->next = e;
     }
 
-    saveToFile();
+    saveToFile(); // Записване във файл
     std::cout << "The event is added.\n" << std::endl;
 }
 
+// Показване на всички събития
 void HistoryMeeting::showEvents() {
     if (head == nullptr) {
         std::cout << "There is no events." << std::endl;
@@ -86,6 +94,7 @@ void HistoryMeeting::showEvents() {
     }
 }
 
+// Търсене на събитие по година
 void HistoryMeeting::searchByYear() {
     int y;
     std::cout << "Enter the year of the event ot search : ";
@@ -105,6 +114,7 @@ void HistoryMeeting::searchByYear() {
         std::cout << "There is no events with that year." << std::endl;
 }
 
+// Търсене на събитие по заглавие или част от него
 void HistoryMeeting::searchByTitle() {
     std::cin.ignore();
     std::string searchTitle;
