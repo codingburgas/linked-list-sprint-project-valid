@@ -132,7 +132,7 @@
     <ClCompile Include="historyMeeting.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="history.h" />
+    <ClInclude Include="User.h" />
     <ClInclude Include="historyMeeting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
