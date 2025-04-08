@@ -1,9 +1,5 @@
 <h1 align="center">Team Valid</h1>
 
-<p align="center">
-    <img src ="src/assets/banner.png"/>
-</p>
-
 ## 🧒 Our Team
 
 <b>
