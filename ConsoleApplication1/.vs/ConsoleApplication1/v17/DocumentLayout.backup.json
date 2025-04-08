@@ -7,20 +7,26 @@
       "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\quiz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\history.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\quiz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\historyMeeting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\historyMeeting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\history.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8F5E59C3-7F17-4CCB-84A8-E30ED1F47BFD}|ConsoleApplication1\\ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1\\history.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,58 +36,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "quiz.cpp",
-              "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
-              "RelativeDocumentMoniker": "ConsoleApplication1\\quiz.cpp",
-              "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
-              "RelativeToolTip": "ConsoleApplication1\\quiz.cpp",
+              "DocumentMoniker": "C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
+              "ToolTip": "C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-05T19:30:02.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-04-05T19:30:02.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "quiz.h",
-              "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
-              "RelativeDocumentMoniker": "ConsoleApplication1\\quiz.h",
-              "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
-              "RelativeToolTip": "ConsoleApplication1\\quiz.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
+              "ToolTip": "C:\\Users\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Home\\Pictures\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\quiz.h",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-05T19:30:00.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "historyMeeting.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.cpp",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\historyMeeting.cpp",
+              "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.cpp",
+              "RelativeToolTip": "ConsoleApplication1\\historyMeeting.cpp",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAowIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-08T16:44:56.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "historyMeeting.h",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.h",
+              "RelativeDocumentMoniker": "ConsoleApplication1\\historyMeeting.h",
+              "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\historyMeeting.h",
+              "RelativeToolTip": "ConsoleApplication1\\historyMeeting.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-08T16:43:57.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "history.h",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.h",
               "RelativeDocumentMoniker": "ConsoleApplication1\\history.h",
               "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.h",
               "RelativeToolTip": "ConsoleApplication1\\history.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-01T15:06:20.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "history.cpp",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.cpp",
               "RelativeDocumentMoniker": "ConsoleApplication1\\history.cpp",
               "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\history.cpp",
               "RelativeToolTip": "ConsoleApplication1\\history.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-01T15:06:01.623Z"
             },
@@ -93,7 +117,7 @@
               "RelativeDocumentMoniker": "ConsoleApplication1\\ConsoleApplication1.cpp",
               "ToolTip": "C:\\Users\\User\\Downloads\\linked-list-sprint-project-valid\\ConsoleApplication1\\ConsoleApplication1\\ConsoleApplication1.cpp",
               "RelativeToolTip": "ConsoleApplication1\\ConsoleApplication1.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-01T13:46:34.568Z",
               "EditorCaption": ""
