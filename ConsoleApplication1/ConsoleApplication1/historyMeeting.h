@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 
 struct Event {
@@ -8,9 +7,18 @@ struct Event {
     Event* next;
 };
 
-void saveToFile();
-void loadFromFile();
-void addEvent();
-void showEvents();
-void searchByYear();
-void searchByTitle();
+class HistoryMeeting {
+private:
+    Event* head;
+
+public:
+    HistoryMeeting();
+    ~HistoryMeeting();
+
+    void loadFromFile();
+    void saveToFile();
+    void addEvent();
+    void showEvents();
+    void searchByYear();
+    void searchByTitle();
+};
