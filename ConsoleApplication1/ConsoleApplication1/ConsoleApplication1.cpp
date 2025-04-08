@@ -1,41 +1,36 @@
 #include "history.h"
-#include "quiz.h"
+#include "historyMeeting.h"
 #include <iostream>
-#include <cstdlib> // For system("cls")
+#include <cstdlib>
 #include <fstream>
 #include <string>
 
 using namespace std;
 
-// Function to display the ASCII art from the file
-void displayMenuArt(const string& filename) {
-    ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Could not open ASCII art file: " << filename << endl;
-        return;
-    }
+void showMainMenu() {
+    cout << "Select an option:" << endl
+        << "1: Register" << endl
+        << "2: Login" << endl
+        << "0: Exit" << endl;
+}
 
-    string line;
-    while (getline(file, line)) {
-        cout << line << endl;
-    }
-
-    file.close();
+void showHistoryMenu() {
+    cout << "Select an option:" << endl
+        << "1: Add a historical event" << endl
+        << "2: Show historical events" << endl
+        << "3: Search event by year" << endl
+        << "4: Search event by title" << endl
+        << "5: Go back to main menu" << endl;
 }
 
 int main() {
     UserManager manager;
     int choice;
-
-    // Display the ASCII Art (HISTORYQUIZ)
-    displayMenuArt("menu_art.txt");
+    int historyChoice;
 
     while (true) {
-        cout << "Select a choice!" << endl
-            << "1: Register" << endl
-            << "2: Login" << endl
-            << "0: Exit" << endl
-            << "Your choice: ";
+        showMainMenu();
+        cout << "Your choice: ";
         cin >> choice;
 
         if (cin.fail()) {
@@ -65,15 +60,76 @@ int main() {
 
             if (manager.LoggingIn(username, password)) {
                 cout << "Login Successful" << endl;
-                system("pause"); // Optional pause before quiz
+                system("pause");
                 system("cls");
 
-                QuizManager quiz;
-                quiz.StartQuiz();
-                break;
+                while (true) {
+                    cout << "What would you like to do?" << endl
+                        << "1: Manage Historical Events" << endl
+                        << "2: Exit" << endl;
+                    cout << "Enter your choice: ";
+                    cin >> historyChoice;
+
+                    if (cin.fail()) {
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cout << "Invalid input! Please enter a valid option." << endl;
+                        continue;
+                    }
+
+                    if (historyChoice == 1) {
+                        system("cls");
+
+                        HistoryMeeting history;
+                        history.loadFromFile();
+
+                        while (true) {
+                            showHistoryMenu();
+                            cout << "Enter your choice: ";
+                            cin >> historyChoice;
+
+                            if (cin.fail()) {
+                                cin.clear();
+                                cin.ignore(1000, '\n');
+                                cout << "Invalid input! Please enter a valid option." << endl;
+                                continue;
+                            }
+
+                            if (historyChoice == 1) {
+                                system("cls");
+                                history.addEvent();
+                            }
+                            else if (historyChoice == 2) {
+                                system("cls");
+                                history.showEvents();
+                            }
+                            else if (historyChoice == 3) {
+                                system("cls");
+                                history.searchByYear();
+                            }
+                            else if (historyChoice == 4) {
+                                system("cls");
+                                history.searchByTitle();
+                            }
+                            else if (historyChoice == 5) {
+                                break;
+                            }
+                            else {
+                                cout << "Invalid choice. Try again!" << endl;
+                            }
+                        }
+                    }
+                    else if (historyChoice == 2) {
+                        cout << "Exiting the program. Bye!" << endl;
+                        return 0;
+                    }
+                    else {
+                        cout << "Invalid option. Try again!" << endl;
+                    }
+                }
             }
             else {
-                cout << "Incorrect Information, Try Again!" << endl;
+                cout << "Incorrect information, try again!" << endl;
             }
         }
         else if (choice == 0) {

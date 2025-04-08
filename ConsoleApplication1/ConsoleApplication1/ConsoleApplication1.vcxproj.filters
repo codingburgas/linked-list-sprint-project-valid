@@ -21,18 +21,12 @@
     <ClCompile Include="history.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="quiz.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="historyMeeting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="history.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="quiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="historyMeeting.h">

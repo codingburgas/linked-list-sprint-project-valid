@@ -130,12 +130,10 @@
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="history.cpp" />
     <ClCompile Include="historyMeeting.cpp" />
-    <ClCompile Include="quiz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="history.h" />
     <ClInclude Include="historyMeeting.h" />
-    <ClInclude Include="quiz.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
