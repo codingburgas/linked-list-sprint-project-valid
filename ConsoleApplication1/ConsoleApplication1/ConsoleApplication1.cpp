@@ -22,7 +22,8 @@ void showHistoryMenu() {
         << "2: Show historical events" << endl
         << "3: Search event by year" << endl
         << "4: Search event by title" << endl
-        << "5: Go back to main menu" << endl;
+        << "5: Delete historical event" << endl
+        << "6: Go back to main menu" << endl;
 }
 
 int main() {
@@ -119,6 +120,10 @@ int main() {
                                 history.searchByTitle(); // Търсене по заглавие
                             }
                             else if (historyChoice == 5) {
+                                system("cls");
+                                history.deleteEvent(); // Изтриване на събитие
+                            }
+                            else if (historyChoice == 6) {
                                 break; // Връщане към горното меню
                             }
                             else {

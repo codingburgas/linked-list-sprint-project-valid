@@ -23,4 +23,5 @@ public:
     void showEvents();       // Показва всички събития
     void searchByYear();     // Търси събитие по година
     void searchByTitle();    // Търси събитие по заглавие или част от него
+    void deleteEvent();      // Изтрива събитие
 };

@@ -2,6 +2,8 @@
 #include <fstream>
 #include <iostream>
 
+using namespace std;
+
 // Конструктор – инициализира началото на списъка със събития
 HistoryMeeting::HistoryMeeting() : head(nullptr) {}
 
@@ -17,7 +19,7 @@ HistoryMeeting::~HistoryMeeting() {
 
 // Запазване на всички събития във файл
 void HistoryMeeting::saveToFile() {
-    std::ofstream file("events.txt");
+    ofstream file("events.txt");
     Event* current = head;
     while (current != nullptr) {
         file << current->year << "|" << current->title << "\n";
@@ -28,13 +30,13 @@ void HistoryMeeting::saveToFile() {
 
 // Зареждане на събития от файл
 void HistoryMeeting::loadFromFile() {
-    std::ifstream file("events.txt");
+    ifstream file("events.txt");
     if (!file) return;
 
-    std::string line;
+    string line;
     while (getline(file, line)) {
         size_t sep = line.find('|');
-        if (sep == std::string::npos) continue;
+        if (sep == string::npos) continue;
 
         // Създаване на ново събитие и добавяне към списъка
         Event* e = new Event;
@@ -58,11 +60,11 @@ void HistoryMeeting::loadFromFile() {
 // Добавяне на ново събитие от потребителя
 void HistoryMeeting::addEvent() {
     Event* e = new Event;
-    std::cout << "Enter year: ";
-    std::cin >> e->year;
-    std::cin.ignore();
-    std::cout << "Enter the title of the event: ";
-    std::getline(std::cin, e->title);
+    cout << "Enter year: ";
+    cin >> e->year;
+    cin.ignore();
+    cout << "Enter the title of the event: ";
+    getline(cin, e->title);
     e->next = nullptr;
 
     // Добавяне в края на списъка
@@ -77,19 +79,19 @@ void HistoryMeeting::addEvent() {
     }
 
     saveToFile(); // Записване във файл
-    std::cout << "The event is added.\n" << std::endl;
+    cout << "The event is added.\n" << endl;
 }
 
 // Показване на всички събития
 void HistoryMeeting::showEvents() {
     if (head == nullptr) {
-        std::cout << "There is no events." << std::endl;
+        cout << "There is no events." << endl;
         return;
     }
 
     Event* current = head;
     while (current != nullptr) {
-        std::cout << current->year << ": " << current->title << std::endl;
+        cout << current->year << ": " << current->title << endl;
         current = current->next;
     }
 }
@@ -97,40 +99,113 @@ void HistoryMeeting::showEvents() {
 // Търсене на събитие по година
 void HistoryMeeting::searchByYear() {
     int y;
-    std::cout << "Enter the year of the event ot search : ";
-    std::cin >> y;
+    cout << "Enter the year of the event ot search : ";
+    cin >> y;
 
     Event* current = head;
     bool found = false;
     while (current != nullptr) {
         if (current->year == y) {
-            std::cout << current->year << ": " << current->title << std::endl;
+            cout << current->year << ": " << current->title << endl;
             found = true;
         }
         current = current->next;
     }
 
     if (!found)
-        std::cout << "There is no events with that year." << std::endl;
+        cout << "There is no events with that year." << endl;
 }
 
 // Търсене на събитие по заглавие или част от него
 void HistoryMeeting::searchByTitle() {
-    std::cin.ignore();
-    std::string searchTitle;
-    std::cout << "Enter a title or part of the name of the event: ";
-    std::getline(std::cin, searchTitle);
+    cin.ignore();
+    string searchTitle;
+    cout << "Enter a title or part of the name of the event: ";
+    getline(cin, searchTitle);
 
     Event* current = head;
     bool found = false;
     while (current != nullptr) {
-        if (current->title.find(searchTitle) != std::string::npos) {
-            std::cout << current->year << ": " << current->title << std::endl;
+        if (current->title.find(searchTitle) != string::npos) {
+            cout << current->year << ": " << current->title << endl;
             found = true;
         }
         current = current->next;
     }
 
     if (!found)
-        std::cout << "There is no events with title like this." << std::endl;
+        cout << "There is no events with title like this." << endl;
+}
+// Изтриване на събитие по година или заглавие
+void HistoryMeeting::deleteEvent() {
+    if (head == nullptr) {
+        cout << "There are no events to delete." << endl;
+        return;
+    }
+
+    int option;
+    cout << "Delete by:" << endl;
+    cout << "1. Year" << endl;
+    cout << "2. Title" << endl;
+    cout << "Choose: ";
+    cin >> option;
+    cin.ignore();
+
+    if (option == 1) {
+        int y;
+        cout << "Enter year of the event to delete: ";
+        cin >> y;
+
+        Event* current = head;
+        Event* previous = nullptr;
+
+        while (current != nullptr) {
+            if (current->year == y) {
+                if (previous == nullptr) {
+                    head = current->next;
+                }
+                else {
+                    previous->next = current->next;
+                }
+                delete current;
+                cout << "Event deleted successfully." << endl << endl;
+                saveToFile();
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
+
+        cout << "Event with that year not found." << endl;
+    }
+    else if (option == 2) {
+        string title;
+        cout << "Enter title or part of it to delete: ";
+        getline(cin, title);
+
+        Event* current = head;
+        Event* previous = nullptr;
+
+        while (current != nullptr) {
+            if (current->title.find(title) != string::npos) {
+                if (previous == nullptr) {
+                    head = current->next;
+                }
+                else {
+                    previous->next = current->next;
+                }
+                delete current;
+                cout << "Event deleted successfully." << endl << endl;
+                saveToFile();
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
+
+        cout << "Event with that title not found." << endl;
+    }
+    else {
+        cout << "Invalid option." << endl;
+    }
 }

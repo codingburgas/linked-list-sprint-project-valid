@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="history.cpp" />
+    <ClCompile Include="User.cpp" />
     <ClCompile Include="historyMeeting.cpp" />
   </ItemGroup>
   <ItemGroup>
