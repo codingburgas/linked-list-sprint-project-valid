@@ -40,6 +40,8 @@
 
 <a href="https://github.com/codingburgas/linked-list-sprint-project-valid/blob/main/docs/Vaild.pptx">Presentation </a>
 
+<a href="">QA </a>
+
 <hr>
 
 ## 📩 How to Install
