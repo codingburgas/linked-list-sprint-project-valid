@@ -40,7 +40,7 @@
 
 <a href="https://github.com/codingburgas/linked-list-sprint-project-valid/blob/main/docs/Vaild.pptx">Presentation </a>
 
-<a href="">QA </a>
+<a href="https://github.com/codingburgas/linked-list-sprint-project-valid/blob/main/docs/Valid_QA.xlsx">QA </a>
 
 <hr>
 
